@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "./middleware";
+import { createRouter, publicQuery } from "./middleware.js";
 import nodemailer from "nodemailer";
 
 export const contactRouter = createRouter({
@@ -78,9 +78,9 @@ export const contactRouter = createRouter({
 
         const info = await transporter.sendMail(mailOptions);
 
-        // For ethereal test accounts, log the preview URL
-        if (info.messageId && info.ethereal) {
-          console.log("Preview URL:", nodemailer.getTestMessageUrl(info));
+        const previewUrl = nodemailer.getTestMessageUrl(info);
+        if (previewUrl) {
+          console.log("Preview URL:", previewUrl);
         }
 
         return { success: true, messageId: info.messageId };
