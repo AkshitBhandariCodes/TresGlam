@@ -1,0 +1,164 @@
+[
+  {
+    "id": "pharma-1",
+    "name": "TresGlam Pain Relief Tablets",
+    "description": "Fast-acting pain relief tablets with advanced formulation for quick absorption and long-lasting comfort.",
+    "price": 249,
+    "image": "/images/pharma-tablets-1.jpg",
+    "category": "pharmaceutical",
+    "subcategory": "tablets"
+  },
+  {
+    "id": "pharma-2",
+    "name": "TresGlam Rejuvena Injection",
+    "description": "Sterile injectable solution for therapeutic use. Manufactured under strict GMP guidelines.",
+    "price": 899,
+    "image": "/images/pharma-injectable-1.jpg",
+    "category": "pharmaceutical",
+    "subcategory": "injectables"
+  },
+  {
+    "id": "pharma-3",
+    "name": "TresGlam Cura Cough Syrup",
+    "description": "Soothing herbal cough syrup with natural extracts. Suitable for adults, provides relief from dry and wet cough.",
+    "price": 189,
+    "image": "/images/pharma-syrup-1.jpg",
+    "category": "pharmaceutical",
+    "subcategory": "syrups"
+  },
+  {
+    "id": "pharma-4",
+    "name": "TresGlam Regen Capsules",
+    "description": "Daily wellness capsules with essential vitamins and minerals for optimal health maintenance.",
+    "price": 349,
+    "image": "/images/pharma-bottle-1.jpg",
+    "category": "pharmaceutical",
+    "subcategory": "capsules"
+  },
+  {
+    "id": "pharma-5",
+    "name": "TresGlam Antibiotic Tablets",
+    "description": "Broad-spectrum antibiotic tablets for bacterial infections. Prescription-required formulation.",
+    "price": 499,
+    "image": "/images/pharma-tablets-1.jpg",
+    "category": "pharmaceutical",
+    "subcategory": "tablets"
+  },
+  {
+    "id": "pharma-6",
+    "name": "TresGlam Vitamin D3 Injectable",
+    "description": "High-potency Vitamin D3 injection for quick deficiency correction. Medical supervision required.",
+    "price": 599,
+    "image": "/images/pharma-injectable-1.jpg",
+    "category": "pharmaceutical",
+    "subcategory": "injectables"
+  },
+  {
+    "id": "nutra-1",
+    "name": "TresGlam Vitamin C 1000mg",
+    "description": "High-strength Vitamin C capsules for immune support. 60 capsules per bottle with orange extract.",
+    "price": 449,
+    "image": "/images/nutra-vitamin-1.jpg",
+    "category": "nutraceutical",
+    "subcategory": "vitamins"
+  },
+  {
+    "id": "nutra-2",
+    "name": "TresGlam Whey Protein Isolate",
+    "description": "Premium whey protein isolate with 25g protein per serving. Unflavored, easy mixing formula.",
+    "price": 1899,
+    "image": "/images/nutra-protein-1.jpg",
+    "category": "nutraceutical",
+    "subcategory": "protein"
+  },
+  {
+    "id": "nutra-3",
+    "name": "TresGlam Omega-3 Softgels",
+    "description": "Ultra-pure Omega-3 fish oil softgels with EPA and DHA for heart and brain health.",
+    "price": 699,
+    "image": "/images/nutra-capsules-1.jpg",
+    "category": "nutraceutical",
+    "subcategory": "vitamins"
+  },
+  {
+    "id": "nutra-4",
+    "name": "TresGlam Botanical Balance",
+    "description": "Herbal supplement with Ashwagandha, Tulsi, and Green Tea extract for stress relief and vitality.",
+    "price": 549,
+    "image": "/images/nutra-herbal-1.jpg",
+    "category": "nutraceutical",
+    "subcategory": "herbal"
+  },
+  {
+    "id": "nutra-5",
+    "name": "TresGlam MultiVitamin Complex",
+    "description": "Complete multivitamin with 25+ essential vitamins and minerals for daily nutritional support.",
+    "price": 399,
+    "image": "/images/nutra-capsules-1.jpg",
+    "category": "nutraceutical",
+    "subcategory": "vitamins"
+  },
+  {
+    "id": "nutra-6",
+    "name": "TresGlam Plant Protein Blend",
+    "description": "Vegan plant protein with pea, rice, and hemp protein. 20g protein per serving, chocolate flavor.",
+    "price": 1299,
+    "image": "/images/nutra-protein-1.jpg",
+    "category": "nutraceutical",
+    "subcategory": "protein"
+  },
+  {
+    "id": "cosmetic-1",
+    "name": "TresGlam Glow Serum",
+    "description": "Luxurious anti-aging serum with hyaluronic acid and vitamin C for radiant, youthful skin.",
+    "price": 1299,
+    "image": "/images/cosmetic-serum-1.jpg",
+    "category": "cosmetics",
+    "subcategory": "skincare"
+  },
+  {
+    "id": "cosmetic-2",
+    "name": "TresGlam Aurora Revitalizing Cream",
+    "description": "Rich moisturizing cream with ceramides and peptides. Deep hydration for dry and mature skin.",
+    "price": 899,
+    "image": "/images/cosmetic-cream-1.jpg",
+    "category": "cosmetics",
+    "subcategory": "skincare"
+  },
+  {
+    "id": "cosmetic-3",
+    "name": "TresGlam Argan Hair Care Set",
+    "description": "Revitalizing shampoo and conditioner duo with organic argan oil and silk proteins for silky hair.",
+    "price": 749,
+    "image": "/images/cosmetic-hair-1.jpg",
+    "category": "cosmetics",
+    "subcategory": "haircare"
+  },
+  {
+    "id": "cosmetic-4",
+    "name": "TresGlam Aurora Glow Body Lotion",
+    "description": "Ultra-hydrating body lotion with shea butter and vitamin E. Leaves skin soft, smooth, and glowing.",
+    "price": 599,
+    "image": "/images/cosmetic-body-1.jpg",
+    "category": "cosmetics",
+    "subcategory": "bodycare"
+  },
+  {
+    "id": "cosmetic-5",
+    "name": "TresGlam Retinol Night Serum",
+    "description": "Advanced retinol serum for overnight skin renewal. Reduces fine lines and improves skin texture.",
+    "price": 1499,
+    "image": "/images/cosmetic-serum-1.jpg",
+    "category": "cosmetics",
+    "subcategory": "skincare"
+  },
+  {
+    "id": "cosmetic-6",
+    "name": "TresGlam Keratin Hair Mask",
+    "description": "Deep conditioning hair mask with keratin and argan oil. Repairs damaged hair and restores shine.",
+    "price": 649,
+    "image": "/images/cosmetic-hair-1.jpg",
+    "category": "cosmetics",
+    "subcategory": "haircare"
+  }
+]
