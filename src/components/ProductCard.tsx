@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { Heart, ShoppingCart, ShoppingBag, Plus, Minus } from "lucide-react";
+import { Heart, ShoppingCart, ShoppingBag, Plus, Minus, ArrowUpRight } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";
 import { useState } from "react";
+import { Link } from "react-router";
+import { WHATSAPP_NUMBER } from "@/const";
 
 interface ProductCardProps {
   id: string;
@@ -13,8 +15,6 @@ interface ProductCardProps {
   category: string;
   index?: number;
 }
-
-const WHATSAPP_NUMBER = "919876543210";
 
 export default function ProductCard({
   id,
@@ -28,6 +28,13 @@ export default function ProductCard({
   const { addToCart, items: cartItems } = useCart();
   const { toggleWishlist, isInWishlist } = useWishlist();
   const [quantity, setQuantity] = useState(1);
+
+  const categoryLabel =
+    category === "pharmaceutical"
+      ? "Skincare"
+      : category === "nutraceutical"
+      ? "Bodycare"
+      : "Cleansers";
 
   const inWishlist = isInWishlist(id);
   const inCart = cartItems.find((i) => i.id === id);
@@ -48,40 +55,42 @@ export default function ProductCard({
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
-      className="group relative bg-white rounded-xl overflow-hidden border border-slate-100 hover:border-orange-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-500/10"
+      className="group relative bg-white/90 rounded-3xl overflow-hidden border border-[#F2E7E4] hover:border-[#E7B7AE] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#EBC7BF]/30"
     >
       {/* Image Container */}
-      <div className="relative aspect-square overflow-hidden bg-slate-50">
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+      <div className="relative aspect-square overflow-hidden bg-[#FFF6F3]">
+        <Link to={`/product/${id}`} aria-label={`View ${name}`}>
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.06]"
+          />
+        </Link>
 
         {/* Category Badge */}
-        <span className="absolute top-3 left-3 bg-[#FF7900] text-white text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wide">
-          {category}
+        <span className="absolute top-3 left-3 bg-[#E7B7AE] text-[#3A2A25] text-[11px] font-semibold px-3 py-1 rounded-full uppercase tracking-[0.18em]">
+          {categoryLabel}
         </span>
 
         {/* Wishlist Button */}
         <button
           onClick={() => toggleWishlist({ id, name, price, image, category })}
-          className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center transition-all duration-200 hover:scale-110"
+          className="absolute top-3 right-3 w-10 h-10 rounded-full bg-white/95 shadow-md flex items-center justify-center transition-all duration-200 hover:scale-110"
           aria-label={inWishlist ? "Remove from wishlist" : "Add to wishlist"}
         >
           <Heart
             size={18}
             className={
               inWishlist
-                ? "fill-red-500 text-red-500"
-                : "text-slate-400 group-hover:text-red-400"
+                ? "fill-rose-500 text-rose-500"
+                : "text-slate-400 group-hover:text-rose-400"
             }
           />
         </button>
 
         {/* Cart indicator */}
         {inCart && (
-          <div className="absolute bottom-3 left-3 bg-[#FF7900] text-white text-xs font-medium px-2 py-1 rounded-full flex items-center gap-1">
+          <div className="absolute bottom-3 left-3 bg-[#C7E7DD] text-[#1E3B33] text-xs font-semibold px-2 py-1 rounded-full flex items-center gap-1">
             <ShoppingCart size={12} />
             {inCart.quantity} in cart
           </div>
@@ -89,17 +98,32 @@ export default function ProductCard({
       </div>
 
       {/* Content */}
-      <div className="p-4">
-        <h3 className="font-semibold text-[#0A1628] text-base mb-1 line-clamp-1">
-          {name}
-        </h3>
+      <div className="p-5">
+        <div className="flex items-start justify-between gap-3">
+          <Link
+            to={`/product/${id}`}
+            className="font-semibold text-[#2A1E1A] text-base mb-1 line-clamp-1 hover:text-[#9C5A4A] transition-colors"
+          >
+            {name}
+          </Link>
+          <Link
+            to={`/product/${id}`}
+            className="w-9 h-9 rounded-full border border-[#E9D8D2] flex items-center justify-center text-[#9C5A4A] hover:bg-[#FAECE7] transition-colors"
+            aria-label={`Open ${name}`}
+          >
+            <ArrowUpRight size={16} />
+          </Link>
+        </div>
         <p className="text-sm text-slate-500 mb-3 line-clamp-2 leading-relaxed">
           {description}
         </p>
 
         <div className="flex items-center justify-between mb-4">
-          <span className="text-lg font-bold text-[#FF7900]">
+          <span className="text-lg font-semibold text-[#9C5A4A]">
             Rs. {price}
+          </span>
+          <span className="text-xs uppercase tracking-[0.18em] text-[#B08E86]">
+            signature
           </span>
         </div>
 
@@ -107,16 +131,16 @@ export default function ProductCard({
         <div className="flex items-center gap-2 mb-3">
           <button
             onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-            className="w-8 h-8 rounded-lg border border-slate-200 flex items-center justify-center hover:border-[#FF7900] hover:text-[#FF7900] transition-colors"
+            className="w-8 h-8 rounded-lg border border-[#E6D5CF] flex items-center justify-center hover:border-[#9C5A4A] hover:text-[#9C5A4A] transition-colors"
           >
             <Minus size={14} />
           </button>
-          <span className="w-10 text-center font-medium text-[#0A1628]">
+          <span className="w-10 text-center font-medium text-[#2A1E1A]">
             {quantity}
           </span>
           <button
             onClick={() => setQuantity((q) => q + 1)}
-            className="w-8 h-8 rounded-lg border border-slate-200 flex items-center justify-center hover:border-[#FF7900] hover:text-[#FF7900] transition-colors"
+            className="w-8 h-8 rounded-lg border border-[#E6D5CF] flex items-center justify-center hover:border-[#9C5A4A] hover:text-[#9C5A4A] transition-colors"
           >
             <Plus size={14} />
           </button>
@@ -126,14 +150,14 @@ export default function ProductCard({
         <div className="flex gap-2">
           <button
             onClick={handleAddToCart}
-            className="flex-1 bg-[#FF7900] text-white py-2.5 rounded-lg font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#e66d00] transition-colors active:scale-[0.98]"
+            className="flex-1 bg-[#2A1E1A] text-white py-2.5 rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#3B2B25] transition-colors active:scale-[0.98]"
           >
             <ShoppingCart size={16} />
             Add to Cart
           </button>
           <button
             onClick={handleBuyNow}
-            className="flex-1 border-2 border-[#FF7900] text-[#FF7900] py-2.5 rounded-lg font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#FF7900] hover:text-white transition-colors active:scale-[0.98]"
+            className="flex-1 border-2 border-[#9C5A4A] text-[#9C5A4A] py-2.5 rounded-xl font-medium text-sm flex items-center justify-center gap-2 hover:bg-[#9C5A4A] hover:text-white transition-colors active:scale-[0.98]"
           >
             <ShoppingBag size={16} />
             Buy Now

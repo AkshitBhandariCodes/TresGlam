@@ -40,133 +40,133 @@ interface CategoryConfig {
 
 const categoryConfigs: Record<string, CategoryConfig> = {
   pharmaceutical: {
-    title: "Pharmaceutical",
+    title: "Skincare",
     description:
-      "Cutting-edge pharmaceutical formulations developed with precision and care. Our products meet the highest standards of safety, efficacy, and regulatory compliance.",
-    heroImage: "/images/pharma-lab.jpg",
-    introHeading: "Precision in Every Formulation",
+      "Refined skincare essentials for luminous, balanced, and hydrated skin. Thoughtfully crafted for daily rituals.",
+    heroImage: "/images/TresGlam herbal avacado.png",
+    introHeading: "Soft, hydrated, and glow-ready",
     introParagraph1:
-      "At TresGlam, our pharmaceutical division combines decades of research expertise with state-of-the-art manufacturing facilities. We develop formulations that span tablets, capsules, injectables, syrups, and topical preparations.",
+      "TresGlam Skincare is built on calming botanicals, cushiony textures, and a glow-first philosophy. Every product is designed to work gently yet effectively.",
     introParagraph2:
-      "Every product undergoes stringent quality control measures, from raw material testing to finished product validation. Our facilities are GMP-certified and follow international pharmacopeial standards.",
+      "From brightening serums to repairing creams, our formulas support hydration, barrier care, and long-lasting radiance.",
     stats: [
-      { value: "150+", label: "Formulations Developed" },
-      { value: "50+", label: "GMP Certifications" },
-      { value: "99.9%", label: "Quality Pass Rate" },
+      { value: "120+", label: "Glow Rituals" },
+      { value: "98%", label: "Customer Love" },
+      { value: "Clean", label: "Ingredient Promise" },
     ],
     steps: [
       {
         icon: Microscope,
-        title: "Research & Development",
+        title: "Skin Analysis",
         description:
-          "Our scientists identify active compounds and develop optimal formulations through extensive research.",
+          "We study skin needs to shape formulas that feel soft and effective.",
       },
       {
         icon: FlaskConical,
-        title: "Quality Testing",
+        title: "Botanical Blending",
         description:
-          "Raw materials and intermediates undergo rigorous testing in our NABL-accredited laboratories.",
+          "Natural extracts are balanced for gentle daily use.",
       },
       {
         icon: Factory,
-        title: "Precision Manufacturing",
+        title: "Texture Craft",
         description:
-          "GMP-certified facilities ensure every batch meets exact specifications and purity standards.",
+          "Serums, creams, and masks are refined for a luxe finish.",
       },
       {
         icon: ShieldCheck,
-        title: "Final Validation",
+        title: "Glow Assurance",
         description:
-          "Finished products are tested for potency, stability, and safety before release.",
+          "Every batch is checked for safety, sensorial feel, and results.",
       },
     ],
-    subcategories: ["All", "Tablets", "Capsules", "Injectables", "Syrups"],
+    subcategories: ["All", "Serums", "Creams", "Treatments", "Eye Care"],
     categoryKey: "pharmaceutical",
   },
   nutraceutical: {
-    title: "Nutraceutical",
+    title: "Bodycare",
     description:
-      "Science-backed nutritional supplements designed to enhance your health and well-being. From vitamins to specialized wellness formulations.",
-    heroImage: "/images/nutra-lab.jpg",
-    introHeading: "Wellness Through Science",
+      "Hydrating and smoothing bodycare designed to leave skin soft, supple, and radiant.",
+    heroImage: "/images/TresGlam Herbal Sunblock.png",
+    introHeading: "Velvet-smooth body rituals",
     introParagraph1:
-      "Our nutraceutical division develops advanced dietary supplements that bridge the gap between food and medicine. We create targeted formulations for immune support, cognitive health, joint care, and overall wellness.",
+      "TresGlam Bodycare pampers skin with rich moisturizers, brightening care, and sensorial textures that feel like spa-level indulgence.",
     introParagraph2:
-      "Using bioavailable forms of vitamins, minerals, and botanical extracts, our products ensure maximum absorption and efficacy.",
+      "From sun care to pigmentation treatments, each formula is designed for softness, comfort, and glow.",
     stats: [
-      { value: "200+", label: "Supplement Variants" },
-      { value: "30+", label: "Clinical Studies" },
-      { value: "100%", label: "Natural Sources" },
+      { value: "80+", label: "Body Rituals" },
+      { value: "4.9", label: "Average Rating" },
+      { value: "100%", label: "Comfort Focused" },
     ],
     steps: [
       {
         icon: Search,
-        title: "Nutraceutical Research",
+        title: "Texture Study",
         description:
-          "Identifying potent natural compounds with proven health benefits.",
+          "We test sensorial finishes for smooth, never-greasy wear.",
       },
       {
         icon: Activity,
-        title: "Bioavailability Testing",
+        title: "Moisture Lock",
         description:
-          "Ensuring optimal absorption and utilization by the body.",
+          "Hydration-focused blends that stay comfortable all day.",
       },
       {
         icon: Sparkles,
-        title: "Clean Manufacturing",
-        description: "Produced in allergen-free, certified facilities.",
+        title: "Glow Finish",
+        description: "Soft sheen and an elevated, spa-like feel.",
       },
       {
         icon: CheckCircle,
-        title: "Potency Verification",
-        description: "Third-party tested for purity and label accuracy.",
+        title: "Comfort Check",
+        description: "Gentle formulas designed for everyday rituals.",
       },
     ],
-    subcategories: ["All", "Vitamins", "Protein", "Herbal", "Specialty"],
+    subcategories: ["All", "Moisturizers", "Sun Care", "Brightening", "Masks"],
     categoryKey: "nutraceutical",
   },
   cosmetics: {
-    title: "Cosmetics",
+    title: "Cleansers",
     description:
-      "Luxury cosmetic formulations that blend nature's finest ingredients with cutting-edge dermatological science for radiant, healthy skin.",
-    heroImage: "/images/cosmetic-lab.jpg",
-    introHeading: "Beauty Meets Innovation",
+      "Refreshing cleansers and face washes that leave skin clear, balanced, and luminous.",
+    heroImage: "/images/TresGlam kiwi glowing face wash.png",
+    introHeading: "Fresh, clarified, and renewed",
     introParagraph1:
-      "TresGlam Cosmetics combines the art of beauty with the precision of science. Our dermatologically-tested skincare, haircare, and personal care products are formulated with premium active ingredients.",
+      "Every cleanser is designed to lift away impurities while keeping skin hydrated and calm.",
     introParagraph2:
-      "From anti-aging serums to hydrating moisturizers, each product is designed to deliver visible results while being gentle on your skin.",
+      "Fruit-forward extracts and soothing botanicals make cleansing a moment of indulgence.",
     stats: [
-      { value: "100+", label: "Product SKUs" },
-      { value: "Dermatologist", label: "Approved" },
-      { value: "0%", label: "Harmful Chemicals" },
+      { value: "60+", label: "Cleanse Rituals" },
+      { value: "24/7", label: "Skin Comfort" },
+      { value: "0%", label: "Harsh Sulfates" },
     ],
     steps: [
       {
         icon: Globe,
-        title: "Ingredient Sourcing",
+        title: "Fresh Botanicals",
         description:
-          "Premium natural and synthetic ingredients sourced from trusted global suppliers.",
+          "Carefully sourced fruit extracts for a soft, clean finish.",
       },
       {
         icon: HeartPulse,
-        title: "Dermatological Testing",
+        title: "Skin Balance",
         description:
-          "Patch testing and clinical trials for skin compatibility and safety.",
+          "Formulas designed to maintain a healthy moisture barrier.",
       },
       {
         icon: Droplets,
-        title: "Luxury Formulation",
+        title: "Gentle Purification",
         description:
-          "Creams, serums, and lotions crafted with optimal texture and absorption.",
+          "Low-foam textures that cleanse without stripping.",
       },
       {
         icon: Award,
-        title: "Quality Assurance",
+        title: "Glow Ready",
         description:
-          "Stability testing and microbial validation before packaging.",
+          "Refreshing finishes that prep skin for the rest of your ritual.",
       },
     ],
-    subcategories: ["All", "Skincare", "Haircare", "Bodycare", "Serums"],
+    subcategories: ["All", "Foam", "Gel", "Brightening", "Daily"],
     categoryKey: "cosmetics",
   },
 };
@@ -192,7 +192,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
   return (
     <div className="min-h-screen">
       {/* Category Hero */}
-      <section className="relative pt-32 pb-20 bg-[#F8FAFC]">
+      <section className="relative pt-32 pb-20 bg-[#FDF7F4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <motion.div
@@ -201,7 +201,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
             transition={{ duration: 0.4 }}
             className="flex items-center gap-2 text-sm text-slate-500 mb-8"
           >
-            <Link to="/" className="hover:text-[#FF7900] transition-colors">
+            <Link to="/" className="hover:text-[#9C5A4A] transition-colors">
               Home
             </Link>
             <ChevronRight size={14} />
@@ -214,7 +214,6 @@ export default function CategoryPage({ category }: CategoryPageProps) {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="font-bold text-[#0A1628] mb-6"
             style={{
-              fontFamily: "Poppins, sans-serif",
               fontSize: "clamp(40px, 5vw, 72px)",
               lineHeight: 1.1,
             }}
@@ -260,13 +259,12 @@ export default function CategoryPage({ category }: CategoryPageProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="lg:w-1/2"
             >
-              <p className="text-[#FF7900] text-xs uppercase tracking-[0.15em] font-medium mb-4">
+              <p className="text-[#9C5A4A] text-xs uppercase tracking-[0.25em] font-medium mb-4">
                 OUR EXPERTISE
               </p>
               <h2
                 className="font-bold text-[#0A1628] mb-6"
                 style={{
-                  fontFamily: "Poppins, sans-serif",
                   fontSize: "clamp(28px, 3vw, 40px)",
                   lineHeight: 1.2,
                 }}
@@ -291,7 +289,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
                     transition={{ duration: 0.5, delay: 0.4 + i * 0.2 }}
                     className="text-center"
                   >
-                    <p className="text-2xl lg:text-3xl font-bold text-[#FF7900]">
+                    <p className="text-2xl lg:text-3xl font-semibold text-[#9C5A4A]">
                       {stat.value}
                     </p>
                     <p className="text-xs text-slate-500 mt-1">{stat.label}</p>
@@ -304,7 +302,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
       </section>
 
       {/* How Products Are Made */}
-      <section className="py-20 lg:py-28 bg-[#F8FAFC]">
+      <section className="py-20 lg:py-28 bg-[#FDF7F4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -313,13 +311,12 @@ export default function CategoryPage({ category }: CategoryPageProps) {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <p className="text-[#FF7900] text-xs uppercase tracking-[0.15em] font-medium mb-4">
+            <p className="text-[#9C5A4A] text-xs uppercase tracking-[0.25em] font-medium mb-4">
               PROCESS
             </p>
             <h2
               className="font-bold text-[#0A1628]"
               style={{
-                fontFamily: "Poppins, sans-serif",
                 fontSize: "clamp(28px, 3vw, 44px)",
               }}
             >
@@ -329,7 +326,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {/* Connecting line (desktop only) */}
-            <div className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-[#FF7900]/20 via-[#FF7900]/40 to-[#FF7900]/20" />
+            <div className="hidden lg:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-[#E7B7AE]/30 via-[#E7B7AE]/60 to-[#E7B7AE]/30" />
 
             {config.steps.map((step, i) => {
               const Icon = step.icon;
@@ -342,8 +339,8 @@ export default function CategoryPage({ category }: CategoryPageProps) {
                   transition={{ duration: 0.6, delay: i * 0.2 }}
                   className="relative text-center"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-[#FF7900]/10 flex items-center justify-center mx-auto mb-5 relative z-10">
-                    <Icon size={28} className="text-[#FF7900]" />
+                  <div className="w-16 h-16 rounded-2xl bg-[#F3E1DB] flex items-center justify-center mx-auto mb-5 relative z-10">
+                    <Icon size={28} className="text-[#9C5A4A]" />
                   </div>
                   <h3 className="font-semibold text-[#0A1628] text-lg mb-3">
                     {step.title}
@@ -368,13 +365,12 @@ export default function CategoryPage({ category }: CategoryPageProps) {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <p className="text-[#FF7900] text-xs uppercase tracking-[0.15em] font-medium mb-4">
+            <p className="text-[#9C5A4A] text-xs uppercase tracking-[0.25em] font-medium mb-4">
               PRODUCTS
             </p>
             <h2
               className="font-bold text-[#0A1628]"
               style={{
-                fontFamily: "Poppins, sans-serif",
                 fontSize: "clamp(28px, 3vw, 44px)",
               }}
             >
@@ -396,8 +392,8 @@ export default function CategoryPage({ category }: CategoryPageProps) {
                 onClick={() => setActiveFilter(sub)}
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeFilter === sub
-                    ? "bg-[#FF7900] text-white shadow-lg shadow-orange-500/25"
-                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    ? "bg-[#9C5A4A] text-white shadow-lg shadow-[#E7B7AE]/40"
+                    : "bg-[#F3E8E4] text-[#6B5C56] hover:bg-[#EAD6CF]"
                 }`}
               >
                 {sub}

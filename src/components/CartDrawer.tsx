@@ -36,10 +36,10 @@ export default function CartDrawer() {
             className="fixed right-0 top-0 bottom-0 w-full max-w-md bg-white z-50 shadow-2xl flex flex-col"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-5 border-b border-slate-100">
+            <div className="flex items-center justify-between p-5 border-b border-[#F2E7E4]">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#FF7900]/10 flex items-center justify-center">
-                  <ShoppingBag size={20} className="text-[#FF7900]" />
+                <div className="w-10 h-10 rounded-full bg-[#F3E1DB] flex items-center justify-center">
+                  <ShoppingBag size={20} className="text-[#9C5A4A]" />
                 </div>
                 <div>
                   <h2 className="text-lg font-bold text-[#0A1628]">Shopping Cart</h2>
@@ -48,7 +48,7 @@ export default function CartDrawer() {
               </div>
               <button
                 onClick={() => setIsCartOpen(false)}
-                className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors"
+                className="w-9 h-9 rounded-full bg-[#F5EDEA] flex items-center justify-center hover:bg-[#EAD6CF] transition-colors"
               >
                 <X size={18} />
               </button>
@@ -77,7 +77,7 @@ export default function CartDrawer() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, x: 100 }}
-                      className="flex gap-4 p-3 rounded-xl bg-slate-50 border border-slate-100"
+                      className="flex gap-4 p-3 rounded-2xl bg-[#FFF7F4] border border-[#F2E7E4]"
                     >
                       <img
                         src={item.image}
@@ -88,7 +88,7 @@ export default function CartDrawer() {
                         <h4 className="text-sm font-semibold text-[#0A1628] truncate">
                           {item.name}
                         </h4>
-                        <p className="text-sm font-bold text-[#FF7900] mt-1">
+                        <p className="text-sm font-semibold text-[#9C5A4A] mt-1">
                           Rs. {item.price}
                         </p>
                         <div className="flex items-center gap-2 mt-2">
@@ -96,7 +96,7 @@ export default function CartDrawer() {
                             onClick={() =>
                               updateQuantity(item.id, item.quantity - 1)
                             }
-                            className="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center hover:border-[#FF7900] transition-colors"
+                            className="w-7 h-7 rounded-lg bg-white border border-[#E6D5CF] flex items-center justify-center hover:border-[#9C5A4A] transition-colors"
                           >
                             <Minus size={12} />
                           </button>
@@ -107,7 +107,7 @@ export default function CartDrawer() {
                             onClick={() =>
                               updateQuantity(item.id, item.quantity + 1)
                             }
-                            className="w-7 h-7 rounded-lg bg-white border border-slate-200 flex items-center justify-center hover:border-[#FF7900] transition-colors"
+                            className="w-7 h-7 rounded-lg bg-white border border-[#E6D5CF] flex items-center justify-center hover:border-[#9C5A4A] transition-colors"
                           >
                             <Plus size={12} />
                           </button>
@@ -136,7 +136,7 @@ export default function CartDrawer() {
                 </div>
                 <button
                   onClick={openWhatsApp}
-                  className="w-full bg-[#FF7900] text-white py-3.5 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#e66d00] transition-colors active:scale-[0.98]"
+                  className="w-full bg-[#2A1E1A] text-white py-3.5 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#3B2B25] transition-colors active:scale-[0.98]"
                 >
                   <MessageCircle size={20} />
                   Checkout via WhatsApp

@@ -7,6 +7,7 @@ import WishlistDrawer from "@/components/WishlistDrawer";
 import HomePage from "@/pages/HomePage";
 import CategoryPage from "@/pages/CategoryPage";
 import ContactPage from "@/pages/ContactPage";
+import ProductPage from "@/pages/ProductPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -18,7 +19,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F8FAFC]">
+    <div className="min-h-screen bg-[#FDF7F4]">
       <ScrollToTop />
       <Header />
       <CartDrawer />
@@ -38,6 +39,7 @@ export default function App() {
           element={<CategoryPage category="cosmetics" />}
         />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/product/:id" element={<ProductPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
       <Footer />

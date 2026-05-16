@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from "react";
+import { WHATSAPP_NUMBER } from "@/const";
 
 export interface CartItem {
   id: string;
@@ -26,8 +27,6 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | null>(null);
 
 const CART_STORAGE_KEY = "tresglam_cart";
-const WHATSAPP_NUMBER = "919876543210";
-
 function loadCart(): CartItem[] {
   try {
     const stored = localStorage.getItem(CART_STORAGE_KEY);

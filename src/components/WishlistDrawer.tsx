@@ -93,13 +93,13 @@ export default function WishlistDrawer() {
                         <h4 className="text-sm font-semibold text-[#0A1628] truncate">
                           {item.name}
                         </h4>
-                        <p className="text-sm font-bold text-[#FF7900] mt-1">
+                        <p className="text-sm font-semibold text-[#9C5A4A] mt-1">
                           Rs. {item.price}
                         </p>
                         <div className="flex items-center gap-2 mt-3">
                           <button
                             onClick={() => handleAddToCart(item)}
-                            className="flex-1 bg-[#FF7900] text-white py-2 rounded-lg text-xs font-medium flex items-center justify-center gap-1.5 hover:bg-[#e66d00] transition-colors"
+                            className="flex-1 bg-[#2A1E1A] text-white py-2 rounded-lg text-xs font-medium flex items-center justify-center gap-1.5 hover:bg-[#3B2B25] transition-colors"
                           >
                             <ShoppingCart size={14} />
                             Add to Cart

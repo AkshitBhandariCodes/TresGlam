@@ -23,7 +23,7 @@ const partners = [
 
 export default function Partners() {
   return (
-    <section className="py-24 lg:py-32 bg-[#F8FAFC]">
+    <section className="py-24 lg:py-32 bg-[#FDF7F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -33,20 +33,19 @@ export default function Partners() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-[#FF7900] text-xs uppercase tracking-[0.15em] font-medium mb-4">
+          <p className="text-[#9C5A4A] text-xs uppercase tracking-[0.25em] font-medium mb-4">
             PARTNERSHIPS
           </p>
           <h2
-            className="font-bold text-[#0A1628] mb-4"
+            className="font-semibold text-[#2A1E1A] mb-4"
             style={{
-              fontFamily: "Poppins, sans-serif",
               fontSize: "clamp(28px, 3vw, 44px)",
             }}
           >
-            Trusted by Industry Leaders
+            Loved by Beauty Leaders
           </h2>
-          <p className="text-slate-500 text-base max-w-md mx-auto">
-            We collaborate with leading brands and distributors worldwide
+          <p className="text-[#6B5C56] text-base max-w-md mx-auto">
+            Curated collaborations with the names that define modern beauty.
           </p>
         </motion.div>
 
@@ -63,18 +62,18 @@ export default function Partners() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{
                   y: -4,
-                  borderColor: "#FF7900",
+                  borderColor: "#9C5A4A",
                   transition: { duration: 0.3 },
                 }}
-                className="bg-white rounded-xl p-8 border border-slate-200 flex flex-col items-center justify-center gap-4 cursor-pointer transition-colors hover:shadow-lg hover:shadow-orange-500/5"
+                className="group bg-white rounded-3xl p-8 border border-[#F2E7E4] flex flex-col items-center justify-center gap-4 cursor-pointer transition-colors hover:shadow-xl hover:shadow-[#EBC7BF]/30"
               >
-                <div className="w-12 h-12 rounded-lg bg-slate-50 flex items-center justify-center transition-all group-hover:bg-orange-50">
+                <div className="w-12 h-12 rounded-2xl bg-[#F8EEEA] flex items-center justify-center">
                   <Icon
                     size={24}
-                    className="text-slate-400 hover:text-[#FF7900] transition-colors"
+                    className="text-[#B08E86]"
                   />
                 </div>
-                <span className="text-sm font-medium text-slate-600 text-center leading-tight">
+                <span className="text-sm font-medium text-[#5C4A43] text-center leading-tight">
                   {partner.name}
                 </span>
               </motion.div>

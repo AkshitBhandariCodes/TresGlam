@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { trpc } from "@/providers/trpc";
+import { WHATSAPP_NUMBER } from "@/const";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -60,11 +61,13 @@ export default function ContactPage() {
     sendEmail.mutate(formData);
   };
 
+  const whatsAppLink = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20TresGlam,%20I%20have%20a%20question`;
+
   const inputClasses =
-    "w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200 text-[#0A1628] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#FF7900]/30 focus:border-[#FF7900] transition-all text-sm";
+    "w-full px-4 py-3.5 rounded-xl bg-white border border-[#EAD6CF] text-[#2A1E1A] placeholder-[#A58A82] focus:outline-none focus:ring-2 focus:ring-[#E7B7AE]/40 focus:border-[#E7B7AE] transition-all text-sm";
 
   return (
-    <div className="min-h-screen pt-24 pb-16 bg-[#F8FAFC]">
+    <div className="min-h-screen pt-24 pb-16 bg-[#FDF7F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -73,21 +76,20 @@ export default function ContactPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-[#FF7900] text-xs uppercase tracking-[0.15em] font-medium mb-4">
+          <p className="text-[#9C5A4A] text-xs uppercase tracking-[0.25em] font-medium mb-4">
             CONTACT US
           </p>
           <h1
-            className="font-bold text-[#0A1628] mb-4"
+            className="font-semibold text-[#2A1E1A] mb-4"
             style={{
-              fontFamily: "Poppins, sans-serif",
               fontSize: "clamp(32px, 4vw, 56px)",
               lineHeight: 1.1,
             }}
           >
-            Get In Touch
+            Let’s talk beauty.
           </h1>
-          <p className="text-slate-500 text-lg max-w-md mx-auto">
-            We would love to hear from you. Reach out to us for any inquiries.
+          <p className="text-[#6B5C56] text-lg max-w-md mx-auto">
+            We would love to hear from you. Share your questions or ritual goals.
           </p>
         </motion.div>
 
@@ -100,44 +102,44 @@ export default function ContactPage() {
             className="lg:w-2/5 flex flex-col gap-6"
           >
             {/* Email Card */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-100 hover:border-orange-100 hover:shadow-lg hover:shadow-orange-500/5 transition-all">
+            <div className="bg-white rounded-3xl p-6 border border-[#F2E7E4] hover:border-[#E7B7AE] hover:shadow-lg hover:shadow-[#EBC7BF]/30 transition-all">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#FF7900]/10 flex items-center justify-center flex-shrink-0">
-                  <Mail size={22} className="text-[#FF7900]" />
+                <div className="w-12 h-12 rounded-xl bg-[#F3E1DB] flex items-center justify-center flex-shrink-0">
+                  <Mail size={22} className="text-[#9C5A4A]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#0A1628] mb-1">Email</h3>
-                  <p className="text-slate-500 text-sm">info@tresglam.com</p>
-                  <p className="text-slate-500 text-sm">support@tresglam.com</p>
+                  <h3 className="font-semibold text-[#2A1E1A] mb-1">Email</h3>
+                  <p className="text-[#6B5C56] text-sm">hello@tresglam.com</p>
+                  <p className="text-[#6B5C56] text-sm">support@tresglam.com</p>
                 </div>
               </div>
             </div>
 
             {/* Phone Card */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-100 hover:border-orange-100 hover:shadow-lg hover:shadow-orange-500/5 transition-all">
+            <div className="bg-white rounded-3xl p-6 border border-[#F2E7E4] hover:border-[#E7B7AE] hover:shadow-lg hover:shadow-[#EBC7BF]/30 transition-all">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#FF7900]/10 flex items-center justify-center flex-shrink-0">
-                  <Phone size={22} className="text-[#FF7900]" />
+                <div className="w-12 h-12 rounded-xl bg-[#F3E1DB] flex items-center justify-center flex-shrink-0">
+                  <Phone size={22} className="text-[#9C5A4A]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#0A1628] mb-1">Phone</h3>
-                  <p className="text-slate-500 text-sm">+91 98765 43210</p>
-                  <p className="text-slate-500 text-sm">+91 98765 43211</p>
+                  <h3 className="font-semibold text-[#2A1E1A] mb-1">Phone</h3>
+                  <p className="text-[#6B5C56] text-sm">+91 97697 71850</p>
+                  <p className="text-[#6B5C56] text-sm">+91 98765 43211</p>
                 </div>
               </div>
             </div>
 
             {/* Address Card */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-100 hover:border-orange-100 hover:shadow-lg hover:shadow-orange-500/5 transition-all">
+            <div className="bg-white rounded-3xl p-6 border border-[#F2E7E4] hover:border-[#E7B7AE] hover:shadow-lg hover:shadow-[#EBC7BF]/30 transition-all">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#FF7900]/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={22} className="text-[#FF7900]" />
+                <div className="w-12 h-12 rounded-xl bg-[#F3E1DB] flex items-center justify-center flex-shrink-0">
+                  <MapPin size={22} className="text-[#9C5A4A]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#0A1628] mb-1">
+                  <h3 className="font-semibold text-[#2A1E1A] mb-1">
                     Address
                   </h3>
-                  <p className="text-slate-500 text-sm">
+                  <p className="text-[#6B5C56] text-sm">
                     TresGlam HQ, Andheri West,
                     <br />
                     Mumbai, Maharashtra 400053
@@ -147,19 +149,19 @@ export default function ContactPage() {
             </div>
 
             {/* Business Hours */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-100 hover:border-orange-100 hover:shadow-lg hover:shadow-orange-500/5 transition-all">
+            <div className="bg-white rounded-3xl p-6 border border-[#F2E7E4] hover:border-[#E7B7AE] hover:shadow-lg hover:shadow-[#EBC7BF]/30 transition-all">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#FF7900]/10 flex items-center justify-center flex-shrink-0">
-                  <Clock size={22} className="text-[#FF7900]" />
+                <div className="w-12 h-12 rounded-xl bg-[#F3E1DB] flex items-center justify-center flex-shrink-0">
+                  <Clock size={22} className="text-[#9C5A4A]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#0A1628] mb-1">
+                  <h3 className="font-semibold text-[#2A1E1A] mb-1">
                     Business Hours
                   </h3>
-                  <p className="text-slate-500 text-sm">
+                  <p className="text-[#6B5C56] text-sm">
                     Monday - Friday: 9:00 AM - 6:00 PM
                   </p>
-                  <p className="text-slate-500 text-sm">
+                  <p className="text-[#6B5C56] text-sm">
                     Saturday: 10:00 AM - 4:00 PM
                   </p>
                 </div>
@@ -168,19 +170,19 @@ export default function ContactPage() {
 
             {/* WhatsApp Quick Connect */}
             <a
-              href="https://wa.me/919876543210?text=Hi%20TresGlam,%20I%20have%20a%20question"
+              href={whatsAppLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] rounded-2xl p-6 flex items-center gap-4 hover:shadow-lg transition-all group"
+              className="bg-[#2A1E1A] rounded-3xl p-6 flex items-center gap-4 hover:shadow-lg transition-all group"
             >
-              <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
-                <MessageCircle size={22} className="text-white" />
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                <MessageCircle size={22} className="text-[#F8EDE8]" />
               </div>
               <div>
                 <h3 className="font-semibold text-white mb-1">
                   Chat on WhatsApp
                 </h3>
-                <p className="text-white/80 text-sm">
+                <p className="text-white/70 text-sm">
                   Quick response during business hours
                 </p>
               </div>
@@ -198,26 +200,26 @@ export default function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-white rounded-2xl p-10 text-center h-full flex flex-col items-center justify-center border border-slate-100"
+                className="bg-white rounded-3xl p-10 text-center h-full flex flex-col items-center justify-center border border-[#F2E7E4]"
               >
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                  <CheckCircle size={32} className="text-green-500" />
+                <div className="w-16 h-16 rounded-full bg-[#EAF4F1] flex items-center justify-center mb-4">
+                  <CheckCircle size={32} className="text-[#58A38B]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0A1628] mb-2">
+                <h3 className="text-xl font-semibold text-[#2A1E1A] mb-2">
                   Message Sent Successfully!
                 </h3>
-                <p className="text-slate-500">
+                <p className="text-[#6B5C56]">
                   Thank you for reaching out. We will get back to you soon.
                 </p>
               </motion.div>
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-100 flex flex-col gap-5"
+                className="bg-white rounded-3xl p-6 sm:p-8 border border-[#F2E7E4] flex flex-col gap-5"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-medium text-[#0A1628] mb-2">
+                    <label className="block text-sm font-medium text-[#2A1E1A] mb-2">
                       Your Name
                     </label>
                     <input
@@ -237,7 +239,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#0A1628] mb-2">
+                    <label className="block text-sm font-medium text-[#2A1E1A] mb-2">
                       Your Email
                     </label>
                     <input
@@ -259,7 +261,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-medium text-[#0A1628] mb-2">
+                    <label className="block text-sm font-medium text-[#2A1E1A] mb-2">
                       Phone Number
                     </label>
                     <input
@@ -279,7 +281,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#0A1628] mb-2">
+                    <label className="block text-sm font-medium text-[#2A1E1A] mb-2">
                       Subject
                     </label>
                     <select
@@ -298,7 +300,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-[#0A1628] mb-2">
+                  <label className="block text-sm font-medium text-[#2A1E1A] mb-2">
                     Your Message
                   </label>
                   <textarea
@@ -320,9 +322,9 @@ export default function ContactPage() {
                 <motion.button
                   type="submit"
                   disabled={sendEmail.isPending}
-                  whileHover={{ scale: 1.01 }}
-                  whileTap={{ scale: 0.99 }}
-                  className="w-full bg-[#FF7900] text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#e66d00] transition-colors disabled:opacity-70 text-base"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-[#2A1E1A] text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#3B2B25] transition-colors disabled:opacity-70 text-base"
                 >
                   <Send size={18} />
                   {sendEmail.isPending ? "Sending..." : "Send Message"}

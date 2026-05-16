@@ -53,10 +53,10 @@ export default function Contact() {
   };
 
   const inputClasses =
-    "w-full px-4 py-3 rounded-lg bg-white border border-slate-200 text-[#0A1628] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent transition-all text-sm";
+    "w-full px-4 py-3 rounded-xl bg-white border border-[#EAD6CF] text-[#2A1E1A] placeholder-[#A58A82] focus:outline-none focus:ring-2 focus:ring-[#E7B7AE]/40 focus:border-[#E7B7AE] transition-all text-sm";
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-[#FF7900]">
+    <section id="contact" className="py-24 lg:py-32 bg-[#2A1E1A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left Column */}
@@ -67,52 +67,54 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2"
           >
+            <p className="text-[#E7B7AE] text-xs uppercase tracking-[0.25em] font-medium mb-4">
+              CONNECT WITH US
+            </p>
             <h2
-              className="font-bold text-white mb-6"
+              className="font-semibold text-white mb-6"
               style={{
-                fontFamily: "Poppins, sans-serif",
                 fontSize: "clamp(32px, 4vw, 56px)",
                 lineHeight: 1.1,
               }}
             >
-              Get In Touch
+              Let’s craft your glow ritual.
             </h2>
-            <p className="text-white/90 text-lg mb-10 leading-relaxed max-w-md">
-              Have questions about our products or want to partner with us? Send
-              us a message and our team will get back to you.
+            <p className="text-[#EAD6CF] text-lg mb-10 leading-relaxed max-w-md">
+              Share your goals and we will guide you to the right TresGlam
+              essentials.
             </p>
 
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
-                  <Mail size={20} className="text-white" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                  <Mail size={20} className="text-[#F8EDE8]" />
                 </div>
                 <div>
-                  <p className="text-white/60 text-xs uppercase tracking-wide mb-0.5">
+                  <p className="text-white/60 text-xs uppercase tracking-[0.2em] mb-0.5">
                     Email
                   </p>
-                  <p className="text-white font-medium">info@tresglam.com</p>
+                  <p className="text-white font-medium">hello@tresglam.com</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
-                  <Phone size={20} className="text-white" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                  <Phone size={20} className="text-[#F8EDE8]" />
                 </div>
                 <div>
-                  <p className="text-white/60 text-xs uppercase tracking-wide mb-0.5">
+                  <p className="text-white/60 text-xs uppercase tracking-[0.2em] mb-0.5">
                     Phone
                   </p>
-                  <p className="text-white font-medium">+91 98765 43210</p>
+                  <p className="text-white font-medium">+91 97697 71850</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
-                  <MapPin size={20} className="text-white" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                  <MapPin size={20} className="text-[#F8EDE8]" />
                 </div>
                 <div>
-                  <p className="text-white/60 text-xs uppercase tracking-wide mb-0.5">
+                  <p className="text-white/60 text-xs uppercase tracking-[0.2em] mb-0.5">
                     Address
                   </p>
                   <p className="text-white font-medium">
@@ -135,22 +137,22 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-white rounded-2xl p-10 text-center h-full flex flex-col items-center justify-center"
+                className="bg-white rounded-3xl p-10 text-center h-full flex flex-col items-center justify-center"
               >
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
-                  <CheckCircle size={32} className="text-green-500" />
+                <div className="w-16 h-16 rounded-full bg-[#EAF4F1] flex items-center justify-center mb-4">
+                  <CheckCircle size={32} className="text-[#58A38B]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0A1628] mb-2">
-                  Message Sent Successfully!
+                <h3 className="text-xl font-semibold text-[#2A1E1A] mb-2">
+                  Message Sent Successfully
                 </h3>
-                <p className="text-slate-500">
-                  Thank you for reaching out. We will get back to you soon.
+                <p className="text-[#6B5C56]">
+                  Thank you for reaching out. We will get back to you shortly.
                 </p>
               </motion.div>
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-white rounded-2xl p-6 sm:p-8 flex flex-col gap-4"
+                className="bg-white rounded-3xl p-6 sm:p-8 flex flex-col gap-4"
               >
                 <div>
                   <input
@@ -234,7 +236,7 @@ export default function Contact() {
                   disabled={sendEmail.isPending}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-[#FF7900] text-white py-3.5 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#e66d00] transition-colors disabled:opacity-70"
+                  className="w-full bg-[#2A1E1A] text-white py-3.5 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#3B2B25] transition-colors disabled:opacity-70"
                 >
                   <Send size={18} />
                   {sendEmail.isPending ? "Sending..." : "Send Message"}

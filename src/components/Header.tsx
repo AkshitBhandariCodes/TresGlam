@@ -17,9 +17,9 @@ import { useWishlist } from "@/context/WishlistContext";
 
 const navLinks = [
   { path: "/", label: "Home", icon: Home },
-  { path: "/pharmaceutical", label: "Pharmaceutical", icon: Pill },
-  { path: "/nutraceutical", label: "Nutraceutical", icon: Apple },
-  { path: "/cosmetics", label: "Cosmetics", icon: Sparkles },
+  { path: "/pharmaceutical", label: "Skincare", icon: Sparkles },
+  { path: "/nutraceutical", label: "Bodycare", icon: Apple },
+  { path: "/cosmetics", label: "Cleansers", icon: Pill },
   { path: "/contact", label: "Contact", icon: Mail },
 ];
 
@@ -48,20 +48,19 @@ export default function Header() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#0A1628]/90 backdrop-blur-xl shadow-lg shadow-black/10"
+            ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-[#E6CDC6]/40"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 z-10">
-              <span
-                className="text-2xl font-bold tracking-tight"
-                style={{ color: "#FF7900", fontFamily: "Poppins, sans-serif" }}
-              >
-                TresGlam
-              </span>
+            <Link to="/" className="flex items-center z-10">
+              <img
+                src="/images/logo.png"
+                alt="TresGlam"
+                className="h-10 w-32 object-contain sm:h-12 sm:w-40"
+              />
             </Link>
 
             {/* Desktop Nav */}
@@ -79,15 +78,15 @@ export default function Header() {
                       to={link.path}
                       className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
                         isActive
-                          ? "text-[#FF7900]"
-                          : "text-white/80 hover:text-white hover:bg-white/5"
+                          ? "text-[#9C5A4A]"
+                          : "text-[#5C4A43] hover:text-[#2A1E1A] hover:bg-white/60"
                       }`}
                     >
                       {link.label}
                       {isActive && (
                         <motion.div
                           layoutId="activeNav"
-                          className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#FF7900] rounded-full"
+                          className="absolute bottom-0 left-3 right-3 h-0.5 bg-[#9C5A4A] rounded-full"
                           transition={{
                             type: "spring",
                             stiffness: 380,
@@ -109,12 +108,12 @@ export default function Header() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4 }}
                 onClick={() => setIsWishlistOpen(true)}
-                className="relative w-10 h-10 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-all"
+                className="relative w-10 h-10 rounded-full flex items-center justify-center text-[#6B5C56] hover:text-[#2A1E1A] hover:bg-white/70 transition-all"
                 aria-label="Wishlist"
               >
                 <Heart size={20} />
                 {wishlistCount > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF7900] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                    <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#9C5A4A] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                     {wishlistCount}
                   </span>
                 )}
@@ -126,12 +125,12 @@ export default function Header() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.45 }}
                 onClick={() => setIsCartOpen(true)}
-                className="relative w-10 h-10 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-all"
+                className="relative w-10 h-10 rounded-full flex items-center justify-center text-[#6B5C56] hover:text-[#2A1E1A] hover:bg-white/70 transition-all"
                 aria-label="Cart"
               >
                 <ShoppingBag size={20} />
                 {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF7900] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                    <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#9C5A4A] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                     {totalItems}
                   </span>
                 )}
@@ -140,7 +139,7 @@ export default function Header() {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden w-10 h-10 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-all"
+                className="lg:hidden w-10 h-10 rounded-full flex items-center justify-center text-[#6B5C56] hover:text-[#2A1E1A] hover:bg-white/70 transition-all"
                 aria-label="Menu"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -169,7 +168,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute right-0 top-0 bottom-0 w-72 bg-[#0A1628] shadow-2xl p-6 pt-24"
+              className="absolute right-0 top-0 bottom-0 w-72 bg-[#FFF7F4] shadow-2xl p-6 pt-24"
             >
               <nav className="flex flex-col gap-2">
                 {navLinks.map((link) => {
@@ -181,8 +180,8 @@ export default function Header() {
                       to={link.path}
                       className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                         isActive
-                          ? "bg-[#FF7900]/10 text-[#FF7900]"
-                          : "text-white/70 hover:text-white hover:bg-white/5"
+                          ? "bg-[#F3E1DB] text-[#9C5A4A]"
+                          : "text-[#6B5C56] hover:text-[#2A1E1A] hover:bg-white/70"
                       }`}
                     >
                       <Icon size={18} />

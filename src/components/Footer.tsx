@@ -12,9 +12,9 @@ import {
 
 const quickLinks = [
   { path: "/", label: "Home" },
-  { path: "/pharmaceutical", label: "Pharmaceutical" },
-  { path: "/nutraceutical", label: "Nutraceutical" },
-  { path: "/cosmetics", label: "Cosmetics" },
+  { path: "/pharmaceutical", label: "Skincare" },
+  { path: "/nutraceutical", label: "Bodycare" },
+  { path: "/cosmetics", label: "Cleansers" },
   { path: "/contact", label: "Contact" },
 ];
 
@@ -27,7 +27,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A1628] pt-20 pb-8">
+    <footer className="bg-[#2A1E1A] pt-20 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           {/* Brand */}
@@ -37,15 +37,16 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3
-              className="text-2xl font-bold mb-3"
-              style={{ color: "#FF7900", fontFamily: "Poppins, sans-serif" }}
-            >
-              TresGlam
-            </h3>
-            <p className="text-slate-400 text-sm mb-6 leading-relaxed">
-              Science meets Beauty. Premium pharmaceutical, nutraceutical, and
-              cosmetic products crafted with precision.
+            <div className="flex items-center mb-3">
+              <img
+                src="/images/logo.png"
+                alt="TresGlam"
+                className="h-10 w-36 object-contain sm:h-12 sm:w-44"
+              />
+            </div>
+            <p className="text-[#D8C3BC] text-sm mb-6 leading-relaxed">
+              Beauty rituals crafted with care. Botanical blends, luminous skin,
+              and everyday indulgence.
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social, i) => {
@@ -59,7 +60,7 @@ export default function Footer() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 + i * 0.1, type: "spring" }}
                     whileHover={{ scale: 1.15 }}
-                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-[#FF7900] hover:text-white transition-all"
+                    className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-[#D8C3BC] hover:bg-[#9C5A4A] hover:text-white transition-all"
                     aria-label={social.label}
                   >
                     <Icon size={18} />
@@ -84,7 +85,7 @@ export default function Footer() {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-slate-400 text-sm hover:text-[#FF7900] transition-colors"
+                    className="text-[#D8C3BC] text-sm hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -107,32 +108,32 @@ export default function Footer() {
               <li>
                 <Link
                   to="/pharmaceutical"
-                  className="text-slate-400 text-sm hover:text-[#FF7900] transition-colors"
+                  className="text-[#D8C3BC] text-sm hover:text-white transition-colors"
                 >
-                  Pharmaceutical
+                  Skincare
                 </Link>
               </li>
               <li>
                 <Link
                   to="/nutraceutical"
-                  className="text-slate-400 text-sm hover:text-[#FF7900] transition-colors"
+                  className="text-[#D8C3BC] text-sm hover:text-white transition-colors"
                 >
-                  Nutraceutical
+                  Bodycare
                 </Link>
               </li>
               <li>
                 <Link
                   to="/cosmetics"
-                  className="text-slate-400 text-sm hover:text-[#FF7900] transition-colors"
+                  className="text-[#D8C3BC] text-sm hover:text-white transition-colors"
                 >
-                  Cosmetics
+                  Cleansers
                 </Link>
               </li>
               <li>
-                <span className="text-slate-400 text-sm">New Arrivals</span>
+                <span className="text-[#D8C3BC] text-sm">New Arrivals</span>
               </li>
               <li>
-                <span className="text-slate-400 text-sm">Best Sellers</span>
+                <span className="text-[#D8C3BC] text-sm">Best Sellers</span>
               </li>
             </ul>
           </motion.div>
@@ -148,18 +149,18 @@ export default function Footer() {
               Contact Us
             </h4>
             <ul className="flex flex-col gap-4">
-              <li className="flex items-center gap-3 text-slate-400 text-sm">
-                <Mail size={16} className="text-[#FF7900] flex-shrink-0" />
+              <li className="flex items-center gap-3 text-[#D8C3BC] text-sm">
+                <Mail size={16} className="text-[#F0C6BC] flex-shrink-0" />
                 info@tresglam.com
               </li>
-              <li className="flex items-center gap-3 text-slate-400 text-sm">
-                <Phone size={16} className="text-[#FF7900] flex-shrink-0" />
-                +91 98765 43210
+              <li className="flex items-center gap-3 text-[#D8C3BC] text-sm">
+                <Phone size={16} className="text-[#F0C6BC] flex-shrink-0" />
+                +91 97697 71850
               </li>
-              <li className="flex items-start gap-3 text-slate-400 text-sm">
+              <li className="flex items-start gap-3 text-[#D8C3BC] text-sm">
                 <MapPin
                   size={16}
-                  className="text-[#FF7900] flex-shrink-0 mt-0.5"
+                  className="text-[#F0C6BC] flex-shrink-0 mt-0.5"
                 />
                 TresGlam HQ, Andheri West, Mumbai, Maharashtra 400053
               </li>
@@ -169,14 +170,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-sm">
+          <p className="text-[#BCA7A0] text-sm">
             © 2025 TresGlam. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-slate-500 text-sm hover:text-slate-300 cursor-pointer transition-colors">
+            <span className="text-[#BCA7A0] text-sm hover:text-white cursor-pointer transition-colors">
               Privacy Policy
             </span>
-            <span className="text-slate-500 text-sm hover:text-slate-300 cursor-pointer transition-colors">
+            <span className="text-[#BCA7A0] text-sm hover:text-white cursor-pointer transition-colors">
               Terms of Service
             </span>
           </div>
