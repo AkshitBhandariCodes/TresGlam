@@ -44,6 +44,7 @@ export default function FeaturedProducts() {
               description={product.description}
               price={product.price}
               image={product.image}
+              images={product.images}
               category={product.category}
               index={i}
             />

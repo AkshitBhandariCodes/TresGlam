@@ -43,12 +43,12 @@ const categoryConfigs: Record<string, CategoryConfig> = {
     title: "Skincare",
     description:
       "Refined skincare essentials for luminous, balanced, and hydrated skin. Thoughtfully crafted for daily rituals.",
-    heroImage: "/images/TresGlam herbal avacado.png",
+    heroImage: "/images/tresglam-herbal-avocado-whitening-cream/TresGlam herbal avacado.png",
     introHeading: "Soft, hydrated, and glow-ready",
     introParagraph1:
       "TresGlam Skincare is built on calming botanicals, cushiony textures, and a glow-first philosophy. Every product is designed to work gently yet effectively.",
     introParagraph2:
-      "From brightening serums to repairing creams, our formulas support hydration, barrier care, and long-lasting radiance.",
+      "From repairing creams to glow rituals, our formulas support hydration, barrier care, and long-lasting radiance.",
     stats: [
       { value: "120+", label: "Glow Rituals" },
       { value: "98%", label: "Customer Love" },
@@ -71,7 +71,7 @@ const categoryConfigs: Record<string, CategoryConfig> = {
         icon: Factory,
         title: "Texture Craft",
         description:
-          "Serums, creams, and masks are refined for a luxe finish.",
+          "Creams and masks are refined for a luxe finish.",
       },
       {
         icon: ShieldCheck,
@@ -80,14 +80,14 @@ const categoryConfigs: Record<string, CategoryConfig> = {
           "Every batch is checked for safety, sensorial feel, and results.",
       },
     ],
-    subcategories: ["All", "Serums", "Creams", "Treatments", "Eye Care"],
+    subcategories: ["All", "Creams", "Treatments", "Eye Care"],
     categoryKey: "pharmaceutical",
   },
   nutraceutical: {
     title: "Bodycare",
     description:
       "Hydrating and smoothing bodycare designed to leave skin soft, supple, and radiant.",
-    heroImage: "/images/TresGlam Herbal Sunblock.png",
+    heroImage: "/images/tresglam-herbal-sunblock-oil-free-cream-spf-30/TresGlam Herbal Sunblock.png",
     introHeading: "Velvet-smooth body rituals",
     introParagraph1:
       "TresGlam Bodycare pampers skin with rich moisturizers, brightening care, and sensorial textures that feel like spa-level indulgence.",
@@ -129,7 +129,7 @@ const categoryConfigs: Record<string, CategoryConfig> = {
     title: "Cleansers",
     description:
       "Refreshing cleansers and face washes that leave skin clear, balanced, and luminous.",
-    heroImage: "/images/TresGlam kiwi glowing face wash.png",
+    heroImage: "/images/tresglam-kiwi-whitening-glowing-face-wash/TresGlam kiwi glowing face wash.png",
     introHeading: "Fresh, clarified, and renewed",
     introParagraph1:
       "Every cleanser is designed to lift away impurities while keeping skin hydrated and calm.",
@@ -412,6 +412,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
                   description={product.description}
                   price={product.price}
                   image={product.image}
+                  images={product.images}
                   category={product.category}
                   index={i}
                 />

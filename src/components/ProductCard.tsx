@@ -5,6 +5,7 @@ import { useWishlist } from "@/context/WishlistContext";
 import { useState } from "react";
 import { Link } from "react-router";
 import { WHATSAPP_NUMBER } from "@/const";
+import ProductImageCarousel from "@/components/ProductImageCarousel";
 
 interface ProductCardProps {
   id: string;
@@ -12,6 +13,7 @@ interface ProductCardProps {
   description: string;
   price: number;
   image: string;
+  images?: string[];
   category: string;
   index?: number;
 }
@@ -22,6 +24,7 @@ export default function ProductCard({
   description,
   price,
   image,
+  images,
   category,
   index = 0,
 }: ProductCardProps) {
@@ -38,9 +41,11 @@ export default function ProductCard({
 
   const inWishlist = isInWishlist(id);
   const inCart = cartItems.find((i) => i.id === id);
+  const gallery = images && images.length > 0 ? images : [image];
+  const primaryImage = gallery[0] ?? image;
 
   const handleAddToCart = () => {
-    addToCart({ id, name, price, image, category });
+    addToCart({ id, name, price, image: primaryImage, category });
   };
 
   const handleBuyNow = () => {
@@ -59,13 +64,14 @@ export default function ProductCard({
     >
       {/* Image Container */}
       <div className="relative aspect-square overflow-hidden bg-[#FFF6F3]">
-        <Link to={`/product/${id}`} aria-label={`View ${name}`}>
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.06]"
-          />
-        </Link>
+        <ProductImageCarousel
+          images={gallery}
+          alt={name}
+          linkTo={`/product/${id}`}
+          ariaLabel={`View ${name}`}
+          className="h-full"
+          imageClassName="transition-transform duration-700 group-hover:scale-[1.06]"
+        />
 
         {/* Category Badge */}
         <span className="absolute top-3 left-3 bg-[#E7B7AE] text-[#3A2A25] text-[11px] font-semibold px-3 py-1 rounded-full uppercase tracking-[0.18em]">
@@ -74,7 +80,7 @@ export default function ProductCard({
 
         {/* Wishlist Button */}
         <button
-          onClick={() => toggleWishlist({ id, name, price, image, category })}
+          onClick={() => toggleWishlist({ id, name, price, image: primaryImage, category })}
           className="absolute top-3 right-3 w-10 h-10 rounded-full bg-white/95 shadow-md flex items-center justify-center transition-all duration-200 hover:scale-110"
           aria-label={inWishlist ? "Remove from wishlist" : "Add to wishlist"}
         >
