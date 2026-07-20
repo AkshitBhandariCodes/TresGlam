@@ -36,7 +36,7 @@ export default function ProductCard({
     category === "pharmaceutical"
       ? "Skincare"
       : category === "nutraceutical"
-      ? "Bodycare"
+      ? "Nutraceutical"
       : "Cleansers";
 
   const inWishlist = isInWishlist(id);

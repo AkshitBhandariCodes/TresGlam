@@ -84,11 +84,11 @@ const categoryConfigs: Record<string, CategoryConfig> = {
     categoryKey: "pharmaceutical",
   },
   nutraceutical: {
-    title: "Bodycare",
+    title: "Nutraceuticals",
     description:
-      "Hydrating and smoothing bodycare designed to leave skin soft, supple, and radiant.",
+      "Beauty and wellness rituals designed to support daily care, protection and radiance.",
     heroImage: "/images/tresglam-herbal-sunblock-oil-free-cream-spf-30/TresGlam Herbal Sunblock.png",
-    introHeading: "Velvet-smooth body rituals",
+    introHeading: "Daily beauty and wellness rituals",
     introParagraph1:
       "TresGlam Bodycare pampers skin with rich moisturizers, brightening care, and sensorial textures that feel like spa-level indulgence.",
     introParagraph2:
