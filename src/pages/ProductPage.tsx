@@ -2,13 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router";
 import {
   ArrowLeft,
-  BadgeCheck,
   Check,
   ChevronDown,
   Droplets,
   GlassWater,
   Leaf,
-  MapPin,
   Minus,
   PackageCheck,
   Plus,
@@ -16,19 +14,10 @@ import {
   ShieldCheck,
   ShoppingBag,
   Sparkles,
-  Sun,
   Truck,
 } from "lucide-react";
 import { seaBuckthornProduct as product } from "@/data/seaBuckthorn";
 import { useCart } from "@/context/CartContext";
-
-const productHighlights = [
-  [Leaf, "100% Natural", "Pure daily wellness ritual"],
-  [MapPin, "Made in India", "Premium Ladakh berries"],
-  [Droplets, "Omega 3, 6, 7, 9", "Beauty from within"],
-  [Sun, "Antioxidant Rich", "Naturally bright berry pulp"],
-  [BadgeCheck, "Premium Skincare", "Supports skin, hair and glow"],
-];
 
 const ingredientHighlights = [
   "Rich in natural Vitamin C",
@@ -153,19 +142,6 @@ export default function ProductPage() {
         ].map(([title, text], index) => (
           <div key={title}><span>0{index + 1}</span><strong>{title}</strong><p>{text}</p></div>
         ))}
-      </section>
-
-      <section className="product-highlight-strip" aria-label="Sea Buckthorn Juice highlights">
-        {productHighlights.map(([Icon, title, text]) => {
-          const HighlightIcon = Icon as typeof Leaf;
-          return (
-            <div key={title as string}>
-              <HighlightIcon size={22} />
-              <strong>{title as string}</strong>
-              <span>{text as string}</span>
-            </div>
-          );
-        })}
       </section>
 
       <section className="product-ingredient-focus">

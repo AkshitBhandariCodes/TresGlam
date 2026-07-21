@@ -992,29 +992,6 @@ em { color: var(--orange); font-weight: 400; }
 .quick-benefits strong { display: block; margin: 30px 0 5px; font-family: "Libre Caslon Display", Georgia, serif; font-size: 22px; font-weight: 400; }
 .quick-benefits p { margin: 0; color: #aab8af; font-size: 10px; }
 
-.product-highlight-strip {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  padding: 0 max(32px, calc((100vw - 1260px) / 2));
-  background: white;
-  border-bottom: 1px solid var(--line);
-}
-
-.product-highlight-strip > div {
-  min-height: 126px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 7px;
-  padding: 24px 22px;
-  border-left: 1px solid var(--line);
-}
-
-.product-highlight-strip > div:last-child { border-right: 1px solid var(--line); }
-.product-highlight-strip svg { color: var(--orange); }
-.product-highlight-strip strong { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-.product-highlight-strip span { color: var(--muted); font-size: 9px; line-height: 1.45; }
-
 .product-ingredient-focus {
   display: grid;
   grid-template-columns: .88fr 1.12fr;
@@ -1197,9 +1174,6 @@ em { color: var(--orange); font-weight: 400; }
   .purchase-panel { padding: 18px 6px; }
   .quick-benefits { grid-template-columns: 1fr 1fr; padding: 0 20px; }
   .quick-benefits > div:nth-child(2) { border-right: 1px solid rgba(255,255,255,.15); }
-  .product-highlight-strip { grid-template-columns: 1fr 1fr; padding: 0 20px; }
-  .product-highlight-strip > div { min-height: 112px; border-bottom: 1px solid var(--line); }
-  .product-highlight-strip > div:nth-child(even) { border-right: 1px solid var(--line); }
   .product-ingredient-focus { grid-template-columns: 1fr; gap: 42px; padding: 78px 24px; }
   .product-ingredient-grid { grid-template-columns: 1fr; }
   .product-story-image { min-height: 650px; order: -1; }
@@ -1277,8 +1251,6 @@ em { color: var(--orange); font-weight: 400; }
   .purchase-actions { grid-template-columns: 105px 1fr; }
   .quick-benefits { grid-template-columns: 1fr; }
   .quick-benefits > div { border-right: 1px solid rgba(255,255,255,.15); border-bottom: 1px solid rgba(255,255,255,.15); }
-  .product-highlight-strip { grid-template-columns: 1fr; padding: 0 18px; }
-  .product-highlight-strip > div { min-height: 104px; border-right: 1px solid var(--line); }
   .product-ingredient-focus { padding: 68px 24px; }
   .product-ingredient-grid span { min-height: 74px; }
   .product-story-image { min-height: 520px; }
