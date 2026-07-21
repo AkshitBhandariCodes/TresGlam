@@ -19,7 +19,7 @@ export default function Footer() {
             <span className="sr-only">Tresglam</span>
           </Link>
           <p>
-            Botanical skincare, considered self-care and daily wellness essentials—made
+            Botanical skincare, considered self-care and daily wellness essentials, made
             to bring a little more glow to every ritual.
           </p>
         </div>
@@ -42,12 +42,12 @@ export default function Footer() {
         <div>
           <h3>Follow the ritual</h3>
           <a href="#" aria-label="Tresglam on Instagram"><Instagram size={16} /> Instagram</a>
-          <p className="footer-note">Beauty · Care · Wellness</p>
+          <p className="footer-note">Beauty | Care | Wellness</p>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Tresglam. All rights reserved.</span>
+        <span>Copyright {new Date().getFullYear()} Tresglam. All rights reserved.</span>
         <span>Purely yours.</span>
       </div>
     </footer>

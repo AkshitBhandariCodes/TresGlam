@@ -30,10 +30,10 @@ export default function Header() {
   return (
     <>
       <div className="announcement-bar">
-        <span>Special launch price ₹700</span>
-        <span className="announcement-divider">•</span>
+        <span>Special launch price Rs. 700</span>
+        <span className="announcement-divider">|</span>
         <span>Premium glass bottle</span>
-        <span className="announcement-divider">•</span>
+        <span className="announcement-divider">|</span>
         <span>From Ladakh</span>
       </div>
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>

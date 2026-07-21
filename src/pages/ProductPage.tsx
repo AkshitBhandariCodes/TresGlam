@@ -2,10 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router";
 import {
   ArrowLeft,
+  BadgeCheck,
   Check,
   ChevronDown,
+  Droplets,
   GlassWater,
   Leaf,
+  MapPin,
   Minus,
   PackageCheck,
   Plus,
@@ -13,10 +16,30 @@ import {
   ShieldCheck,
   ShoppingBag,
   Sparkles,
+  Sun,
   Truck,
 } from "lucide-react";
 import { seaBuckthornProduct as product } from "@/data/seaBuckthorn";
 import { useCart } from "@/context/CartContext";
+
+const productHighlights = [
+  [Leaf, "100% Natural", "Pure daily wellness ritual"],
+  [MapPin, "Made in India", "Premium Ladakh berries"],
+  [Droplets, "Omega 3, 6, 7, 9", "Beauty from within"],
+  [Sun, "Antioxidant Rich", "Naturally bright berry pulp"],
+  [BadgeCheck, "Premium Skincare", "Supports skin, hair and glow"],
+];
+
+const ingredientHighlights = [
+  "Rich in natural Vitamin C",
+  "Omega 3, 6, 7, 9",
+  "Antioxidant rich",
+  "Supports healthy immunity",
+  "Helps maintain healthy skin",
+  "Supports hair health",
+  "100% pure and natural",
+  "Made from premium Ladakh berries",
+];
 
 export default function ProductPage() {
   const [activeImage, setActiveImage] = useState(0);
@@ -79,6 +102,7 @@ export default function ProductPage() {
             <span><ShieldCheck size={15} /> Immunity support</span>
             <span><Sparkles size={15} /> Skin health</span>
             <span><Leaf size={15} /> Antioxidant rich</span>
+            <span><Droplets size={15} /> Omega 3, 6, 7, 9</span>
           </div>
 
           <div className="price-block">
@@ -122,13 +146,44 @@ export default function ProductPage() {
 
       <section className="quick-benefits">
         {[
-          ["Natural Vitamin C", "Daily vitality"],
-          ["Antioxidant rich", "Wellness support"],
-          ["Premium berries", "Sourced from Ladakh"],
-          ["Glass bottled", "Freshness protected"],
+          ["100% Natural", "Pure and simple"],
+          ["Made in India", "Ladakh sourced"],
+          ["Omega 3, 6, 7, 9", "Beauty from within"],
+          ["Antioxidant Rich", "Wellness support"],
         ].map(([title, text], index) => (
           <div key={title}><span>0{index + 1}</span><strong>{title}</strong><p>{text}</p></div>
         ))}
+      </section>
+
+      <section className="product-highlight-strip" aria-label="Sea Buckthorn Juice highlights">
+        {productHighlights.map(([Icon, title, text]) => {
+          const HighlightIcon = Icon as typeof Leaf;
+          return (
+            <div key={title as string}>
+              <HighlightIcon size={22} />
+              <strong>{title as string}</strong>
+              <span>{text as string}</span>
+            </div>
+          );
+        })}
+      </section>
+
+      <section className="product-ingredient-focus">
+        <div>
+          <p className="eyebrow">Ingredient power</p>
+          <h2>Golden Ladakh berries with <em>skin and wellness benefits.</em></h2>
+          <p>
+            Sea buckthorn is known for its naturally bright profile, antioxidant
+            content and rare Omega 3, 6, 7 and 9 composition. This homepage story
+            now continues on the product page so customers see the same premium
+            promise before they add to cart.
+          </p>
+        </div>
+        <div className="product-ingredient-grid">
+          {ingredientHighlights.map((item) => (
+            <span key={item}><Check size={15} /> {item}</span>
+          ))}
+        </div>
       </section>
 
       <section className="product-story-panel">
